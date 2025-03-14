@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "IOTSmartHome-58bf3",
-    "pass_gen": "IOTSmartHome-58bf3"
+    "default": "iot-smart-home-e1a26",
+    "pass_gen": "iot-smart-home-e1a26"
   },
   "targets": {},
   "etags": {}

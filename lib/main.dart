@@ -1,5 +1,6 @@
 import 'package:IOT_SmartHome/core/database/cache/cache_helper.dart';
 import 'package:IOT_SmartHome/core/serveces/service_locator.dart';
+import 'package:IOT_SmartHome/firebase_options.dart';
 import 'package:IOT_SmartHome/routers.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,7 +11,9 @@ import 'package:screenutil_module/main.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (Firebase.apps.isEmpty) {
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+      // options: DefaultFirebaseOptions.currentPlatform
+    );
   }
   setupServiceLocator();
   await getIt<CacheHelper>().init();
